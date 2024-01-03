@@ -16,11 +16,6 @@ export function listeRecentPhotos(outStream, photos) {
     });
 }
 
-function emitPhotoData(outStream, photo) {
-  zztemp(outStream, photo);
-  outStream.write(`<p>location: ${photo.location}</p>\n`);
-}
-
 function zztemp(outStream, photo) {
   outStream.write(`<p>title: ${photo.title}</p>\n`);
   outStream.write(`<p>date: ${photo.date.toDateString()}</p>\n`);
