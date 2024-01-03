@@ -1,7 +1,8 @@
 export function renderPerson(outStream, person) {
   outStream.write(`<p>${person.name}</p>\n`);
   renderPhoto(outStream, person.photo);
-  emitPhotoData(outStream, person.photo);
+  zztemp(outStream, person.photo);
+  outStream.write(`<p>location: ${person.photo.location}</p>\n`);
 }
 
 export function listeRecentPhotos(outStream, photos) {
